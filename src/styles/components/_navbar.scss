@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 25vh;
+    width: 98.5vw;
+
+    .logospace {
+        align-items: center;
+        img{
+            height: 30vh;
+        }
+    }
+
+    nav {
+        width: 97vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    ul {
+
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            align-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: $light;
+
+                &:hover {
+                    color: $tittles;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.shop {
+    color: $light;
+    display: flex;
+    height: 100%;
+    margin: 5rem;
+    justify-content: center;
+
+    .storeIcon {
+     
+        display: flex;
+        height: 80%;
+        padding: 1rem;
+        font-size: 4rem;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: $tittles;
+        }
+    }
+
+    #cantidadCarrito {
+
+        display: flex;
+        height: 90%;
+        color: $light;
+        font-size: 2rem;
+        align-items: center;
+
+    }
+}
