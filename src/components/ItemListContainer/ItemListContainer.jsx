@@ -1,4 +1,4 @@
-import { TituloCards } from "./TituloCards";
+import { TituloCards } from "../TituloCards/TituloCards";
 
 export const ItemListContainer = () => {
   
