@@ -22,7 +22,7 @@
 }
 
 #root {
-  background-color: #2C5082;
+  background-image: url("../../../public/fondo2.png");
   width: 100vw;
   height: 100vh;
   padding: 2rem;
