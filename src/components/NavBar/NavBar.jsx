@@ -1,11 +1,10 @@
 import { CartWidget } from "../CartWidget/CartWidget"
-import logo from '../../assets/logoNombre.png'
 
 export const NavBar = () => {
     return (
         <div className='navbar'>
             <div className='logospace'>
-                <img src={logo} alt="" />
+                <img src='./public/logoNombre.png' alt="logo de Que Chucheria" />
             </div>
             <nav>
                 <ul>

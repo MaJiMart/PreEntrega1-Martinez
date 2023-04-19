@@ -1,0 +1,23 @@
+let products = [
+    { id: '001' ,categoria: 'caramelos', name: 'flinPaf', stock:10, price: 37, foto: './public/car_finpaf'},
+    { id: '002' ,categoria: 'caramelos', name: 'gotitasDeAmor', stock:50, price: 27, foto: ''},
+    { id: '003' ,categoria: 'caramelos', name: 'mogul', stock:20, price: 27, foto: ''},
+    { id: '004' ,categoria: 'caramelos',  name: 'palitosDeLaSelva', stock:80, price: 55, foto: ''},
+    { id: '005' ,categoria: 'caramelos',  name: 'picoDulce', stock:50, price: 11, foto: ''},
+    { id: '006' ,categoria: 'caramelos',  name: 'sugusConfitados', stock:20, price: 19, foto: ''},
+    { id: '007' ,categoria: 'chocolates',  name: 'block', stock:40, price: 2,  foto: ''},
+    { id: '008' ,categoria: 'chocolates',  name: 'bonObon', stock:60, price: 2,  foto: ''},
+    { id: '009' ,categoria: 'chocolates',  name: 'cadbury', stock:20, price: 2,  foto: ''},
+    { id: '010' ,categoria: 'chocolates',  name: 'dosCorazones', stock:50, price: 2,  foto: ''},
+    { id: '011' ,categoria: 'chocolates',  name: 'marroc', stock:50, price: 2,  foto: ''},
+    { id: '012' ,categoria: 'chocolates',  name: 'tofi', stock:60, price: 2,  foto: ''},
+    { id: '013' ,categoria: 'galletas',  name: 'chocolinas', stock:100, price: 2,  foto: ''},
+    { id: '014' ,categoria: 'galletas',  name: 'donSatur', stock:40, price: 2,  foto: ''},
+    { id: '015' ,categoria: 'galletas',  name: 'merengadas', stock:20, price: 2,  foto: ''},
+    { id: '016' ,categoria: 'galletas',  name: 'rodesia', stock:50, price: 2,  foto: ''},
+    { id: '017' ,categoria: 'galletas',  name: 'tentaciones', stock:15, price: 2,  foto: ''},
+    { id: '018' ,categoria: 'galletas',  name: 'tita', stock:50, price: 2,  foto: ''},
+    { id: '019' ,categoria: 'galletas',  name: 'traviata', stock:10, price: 2,  foto: ''},
+    { id: '020' ,categoria: 'galletas',  name: 'turron', stock:60, price: 2,  foto: ''},
+
+] 
