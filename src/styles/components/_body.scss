@@ -1,26 +1,7 @@
 #root{
-    background-image: url('../../../public/fondo2.png');
-    //background-color: $back;
-    width: 100vw;
-    height: 100vh;
-    padding: 2rem;
+    background-repeat:repeat;
+    background-image: url('../../../public/fondo4.png');
+    width: 100%;
 
-    h1{
-        font-family: $italic;
-        width: 100%;
-        margin: 10vh 0vw 1vh 0vw;
-        color: $tittles;
-        font-size: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    h2{
-        font-family: $webfont;
-        width: 100%;
-        margin-top: 5vh;
-        color: $text;
-        display: flex;
-        justify-content: center;
-    }
+
 }

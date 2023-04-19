@@ -5,7 +5,6 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 
 
 function App() {
-
   return (
       <div className="App">
         <NavBar />

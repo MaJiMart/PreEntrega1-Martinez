@@ -2,7 +2,17 @@
 
 /*tipos de fuentes de la web*/
 @import './variables/fonts';
+
 @import './reset/reset';
+
+/* Estilos componentes */
+@import './components/containers';
 @import './components/body';
 @import './components/navbar';
-@import './components/cartwidget'
+@import './components/cartwidget';
+@import './components/cards';
+@import './components/buttons';
+
+/* Estilos de titulos y textos */
+@import './components/tittles';
+@import './components/texts'

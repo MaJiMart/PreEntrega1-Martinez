@@ -1,23 +1,31 @@
 let products = [
-    { id: '001' ,categoria: 'caramelos', name: 'flinPaf', stock:10, price: 37, foto: './public/car_finpaf'},
-    { id: '002' ,categoria: 'caramelos', name: 'gotitasDeAmor', stock:50, price: 27, foto: ''},
-    { id: '003' ,categoria: 'caramelos', name: 'mogul', stock:20, price: 27, foto: ''},
-    { id: '004' ,categoria: 'caramelos',  name: 'palitosDeLaSelva', stock:80, price: 55, foto: ''},
-    { id: '005' ,categoria: 'caramelos',  name: 'picoDulce', stock:50, price: 11, foto: ''},
-    { id: '006' ,categoria: 'caramelos',  name: 'sugusConfitados', stock:20, price: 19, foto: ''},
-    { id: '007' ,categoria: 'chocolates',  name: 'block', stock:40, price: 2,  foto: ''},
-    { id: '008' ,categoria: 'chocolates',  name: 'bonObon', stock:60, price: 2,  foto: ''},
-    { id: '009' ,categoria: 'chocolates',  name: 'cadbury', stock:20, price: 2,  foto: ''},
-    { id: '010' ,categoria: 'chocolates',  name: 'dosCorazones', stock:50, price: 2,  foto: ''},
-    { id: '011' ,categoria: 'chocolates',  name: 'marroc', stock:50, price: 2,  foto: ''},
-    { id: '012' ,categoria: 'chocolates',  name: 'tofi', stock:60, price: 2,  foto: ''},
-    { id: '013' ,categoria: 'galletas',  name: 'chocolinas', stock:100, price: 2,  foto: ''},
-    { id: '014' ,categoria: 'galletas',  name: 'donSatur', stock:40, price: 2,  foto: ''},
-    { id: '015' ,categoria: 'galletas',  name: 'merengadas', stock:20, price: 2,  foto: ''},
-    { id: '016' ,categoria: 'galletas',  name: 'rodesia', stock:50, price: 2,  foto: ''},
-    { id: '017' ,categoria: 'galletas',  name: 'tentaciones', stock:15, price: 2,  foto: ''},
-    { id: '018' ,categoria: 'galletas',  name: 'tita', stock:50, price: 2,  foto: ''},
-    { id: '019' ,categoria: 'galletas',  name: 'traviata', stock:10, price: 2,  foto: ''},
-    { id: '020' ,categoria: 'galletas',  name: 'turron', stock:60, price: 2,  foto: ''},
-
+    { id: '001' ,category: 'Caramelos', name: 'Flynn Paf (5u.)', stock:10, price: 1.5, photo: './public/car_flynnPaf.png'},
+    { id: '002' ,category: 'Caramelos', name: 'Gotitas de Amor', stock:50, price: 0.55, photo: './public/car_gotitasDeAmor.png'},
+    { id: '003' ,category: 'Caramelos', name: 'Mogul', stock:20, price: 1, photo: './public/car_mogul.png'},
+    { id: '004' ,category: 'Caramelos',  name: 'Palitos de la Selva (5u.)', stock:80, price: 1, photo: './public/car_palitosDeLaSelva.png'},
+    { id: '005' ,category: 'Caramelos',  name: 'Pico Dulce', stock:50, price: 1, photo: './public/car_picoDulce.png'},
+    { id: '006' ,category: 'Caramelos',  name: 'Sugus Confitados', stock:20, price: 2, photo: './public/car_sugusConfitados.png'},
+    { id: '007' ,category: 'Chocolates',  name: 'Block', stock:40, price: 2,  photo: './public/cho_block.png'},
+    { id: '008' ,category: 'Chocolates',  name: 'Bon o Bon (por unidad)', stock:60, price: 1.5,  photo: './public/cho_bonObon.png'},
+    { id: '009' ,category: 'Chocolates',  name: 'Cadbury Yoghurt Frutilla', stock:20, price: 3.5,  photo: './public/cho_cadbury.png'},
+    { id: '010' ,category: 'Chocolates',  name: 'Dos Corazones (por unidad)', stock:50, price: 1.5,  photo: './public/cho_dosCorazones.png'},
+    { id: '011' ,category: 'Chocolates',  name: 'Marroc (por unidad)', stock:50, price: 1,  photo: './public/cho_marroc.png'},
+    { id: '012' ,category: 'Chocolates',  name: 'Tofi', stock:60, price: 2,  photo: './public/cho_tofi.png'},
+    { id: '013' ,category: 'Galletas',  name: 'Chocolinas', stock:100, price: 2.5,  photo: './public/galle_chocolinas.png'},
+    { id: '014' ,category: 'Galletas',  name: 'Bizcocho Dulce Don Satur', stock:40, price: 1.5,  photo: './public/galle_donSatur.png'},
+    { id: '015' ,category: 'Galletas',  name: 'Merengadas', stock:20, price: 1.75,  photo: './public/galle_merengadas.png'},
+    { id: '016' ,category: 'Galletas',  name: 'Rhodesia (por unidad)', stock:50, price: 1.25,  photo: './public/galle_rhodesia.png'},
+    { id: '017' ,category: 'Galletas',  name: 'Tentaciones', stock:15, price: 2.5,  photo: './public/galle_tentaciones.png'},
+    { id: '018' ,category: 'Galletas',  name: 'Tita (por unidad)', stock:50, price: 1,  photo: './public/galle_tita.png'},
+    { id: '019' ,category: 'Galletas',  name: 'Traviata', stock:10, price: 2,  photo: './public/galle_traviata.png'},
+    { id: '020' ,category: 'Galletas',  name: 'Turrón (por unidad)', stock:60, price: 1.5,  photo: './public/galle_turron.png'},
 ] 
+
+export const mockeProducts = () =>{
+    return new Promise((res, rej)=>{
+
+        setTimeout(()=>{
+            res(products)
+        }, 1000)
+    }) 
+}

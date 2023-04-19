@@ -1,0 +1,17 @@
+.cards {
+    background-color: whitesmoke;
+    width: 18vw;
+    height: 45vh;
+    margin: 3rem;
+    padding: 0.7rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-pic {
+        width: 14vw;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+h1{
+    font-family: $italic;
+    width: 100%;
+    margin: 10vh 0vw 1vh 0vw;
+    color: $tittles;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    font-family: $webfont;
+    width: 100%;
+    margin-top: 5vh;
+    color: $text;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    font-family: $webfont;
+    color: $text;
+    font-size: 1.3rem;
+}

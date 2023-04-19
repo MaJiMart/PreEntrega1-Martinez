@@ -21,29 +21,20 @@
   font-family: "Inter", sans-serif;
 }
 
-#root {
-  background-image: url("../../../public/fondo2.png");
-  width: 100vw;
-  height: 100vh;
-  padding: 2rem;
-}
-#root h1 {
-  font-family: "Shrikhand", cursive;
-  width: 100%;
-  margin: 10vh 0vw 1vh 0vw;
-  color: #6CACE4;
-  font-size: 5rem;
+/* Estilos componentes */
+.cardsContainer {
+  width: 98%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-#root h2 {
-  font-family: "Inter";
+
+#root {
+  background-repeat: repeat;
+  background-image: url("../../../public/fondo4.png");
   width: 100%;
-  margin-top: 5vh;
-  color: #052541;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar {
@@ -111,4 +102,69 @@
   color: #c7ddf0;
   font-size: 2rem;
   align-items: center;
+}
+
+.cards {
+  background-color: whitesmoke;
+  width: 18vw;
+  height: 45vh;
+  margin: 3rem;
+  padding: 0.7rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card-pic {
+  width: 14vw;
+  border-radius: 10px;
+}
+
+.btnDetalle {
+  width: 10vw;
+  padding: 10px;
+  font-size: 19px;
+  font-family: "Inter";
+  border: none;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.btnDetalle:hover {
+  background: #5DD2FD;
+} /* Estilos de titulos y textos */
+h1 {
+  font-family: "Shrikhand", cursive;
+  width: 100%;
+  margin: 10vh 0vw 1vh 0vw;
+  color: #6CACE4;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Inter";
+  width: 100%;
+  margin-top: 5vh;
+  color: #052541;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-family: "Inter";
+  color: #052541;
+  font-size: 1.3rem;
+}
+
+label {
+  font-family: "Inter";
+  color: #052541;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */
