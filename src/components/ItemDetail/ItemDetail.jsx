@@ -7,7 +7,7 @@ export const ItemDetail = ({ product }) => {
     <div key={product.id} className="cardsDetail">
       <div className="cardBody">
         <div className="imgDet">
-          <img src={product.photo} className="cardPicDetail" alt="imagen golosina card" />
+          <img src={product.photo} className="picDetail" alt="imagen golosina card" />
         </div>
         <div className="infoDet">
           <h3>{product.name}</h3>
