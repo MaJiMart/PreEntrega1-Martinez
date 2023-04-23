@@ -4,7 +4,7 @@ export const Item = ({ id, photo, name, price}) => {
 
   return (
     <div key={id} className="cards">
-      <img src={photo} className="card-pic" alt="imagen golosina card" />
+      <img src={photo} className="cardPic" alt="imagen golosina card" />
         <h3>{name}</h3>
         <label>Precio: {price}€</label>
 

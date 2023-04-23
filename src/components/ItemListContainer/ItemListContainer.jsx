@@ -25,23 +25,8 @@ export const ItemListContainer = () => {
     }
   }, [category])
 
-
-  /* const handleProductFilter = ({ filterState, filterChange }) => (
-    <div>
-      <h2>Buscar Producto</h2>
-      {filterState}
-      <input type="text" value={filterState} onChange={filterChange} />
-    </div>
-  ) */
-
   return (
     <>
-      {/* <center>
-        <Filter>
-          {handleProductFilter}
-        </Filter>
-      </center> */}
-      
       {isLoading ?
         <h2>Cargando...</h2>
         :

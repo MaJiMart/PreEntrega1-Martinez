@@ -10,8 +10,50 @@
     justify-content: space-between;
     align-items: center;
 
-    .card-pic {
+    .cardPic {
         width: 14vw;
         border-radius: 10px;
     }
+}
+
+.cardsDetail{
+    background-color: whitesmoke;
+    width: 50vw;
+    height: 45vh;
+    margin: 3vh 25vw 3vh 25vw;
+    padding: 0.7rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .cardBody{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        .imgDet{
+            margin: 3rem;
+            width: 50%;
+
+            .cardPicDetail{
+                width: 25vw;
+                border-radius: 10px;
+            }
+        }
+
+        .infoDet{
+            height: 60%;
+            margin: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    
 }
