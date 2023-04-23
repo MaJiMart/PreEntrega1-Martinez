@@ -31,10 +31,22 @@
   justify-content: center;
 }
 
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.counter div label {
+  color: #052541;
+}
+
 #root {
   background-repeat: repeat;
   background-image: url("../../../public/fondo4.png");
   width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -55,26 +67,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.navbar ul {
-  display: flex;
   justify-content: space-evenly;
-  width: 60%;
-  align-items: center;
 }
-.navbar ul li {
+.navbar nav .isActive {
   list-style-type: none;
   font-weight: 400;
   font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
   align-content: space-between;
+  text-decoration: none;
+  color: #6CACE4;
 }
-.navbar ul li a {
+.navbar nav .isNotActive {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  align-content: space-between;
   text-decoration: none;
   color: #c7ddf0;
 }
-.navbar ul li a:hover {
+.navbar nav .isNotActive:hover {
   color: #6CACE4;
 }
 
@@ -136,7 +151,39 @@
 }
 .btnDetalle:hover {
   background: #5DD2FD;
-} /* Estilos de titulos y textos */
+}
+
+.btnCounter {
+  width: 2vw;
+  margin: 1rem;
+  padding: 1px;
+  font-size: 19px;
+  font-family: "Inter";
+  border-color: #c7ddf0;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btnAdd {
+  width: 10vw;
+  margin: 1rem;
+  padding: 10px;
+  font-size: 19px;
+  font-family: "Inter";
+  border-color: #c7ddf0;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+/* Estilos de titulos y textos */
 h1 {
   font-family: "Shrikhand", cursive;
   width: 100%;
@@ -161,6 +208,25 @@ h3 {
   font-family: "Inter";
   color: #052541;
   font-size: 1.3rem;
+}
+
+.notFound {
+  background-color: #2C5082;
+  margin: 5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notFound h2 {
+  margin: 3rem;
+  color: #5DD2FD;
+  font-size: 8rem;
+}
+.notFound h3 {
+  margin: 3rem;
+  font-size: 4rem;
 }
 
 label {

@@ -21,3 +21,22 @@ h3{
     color: $text;
     font-size: 1.3rem;
 }
+
+.notFound{
+    background-color: $back;
+    margin: 5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        margin: 3rem;
+        color: $jazzy;
+        font-size: 8rem;
+    }
+    h3{
+        margin: 3rem;
+        font-size: 4rem;
+    }
+}

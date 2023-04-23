@@ -1,40 +1,52 @@
 import { useEffect, useState } from "react";
-import { mockeProducts } from "../../utilities/mockeProducts";
+import { mockProducts } from "../../data/mockProducts";
+import { ItemList } from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
+
+
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  const {category} = useParams()
+
   useEffect(() => {
-    mockeProducts()
-      .then(resultado => { setProducts(resultado) })
+    if (!category) {
+      mockProducts()
+        .then(resultado => { setProducts(resultado) })
+        .catch(error => console.log(error))
+        .finally(() => setIsLoading(false))
+    }else{
+      mockProducts()
+      .then(resultado => { setProducts(resultado.filter(products=>products.category === category)) })
       .catch(error => console.log(error))
       .finally(() => setIsLoading(false))
-  }, [])
+    }
+  }, [category])
 
+
+  /* const handleProductFilter = ({ filterState, filterChange }) => (
+    <div>
+      <h2>Buscar Producto</h2>
+      {filterState}
+      <input type="text" value={filterState} onChange={filterChange} />
+    </div>
+  ) */
 
   return (
-
-    <div className="cardsContainer">
-
+    <>
+      {/* <center>
+        <Filter>
+          {handleProductFilter}
+        </Filter>
+      </center> */}
+      
       {isLoading ?
         <h2>Cargando...</h2>
         :
-        products.map(({ id, photo, name, price, category }) =>
-          <div key={id} className="cards">
-            <img src={photo} className="card-pic" alt="imagen card" />
-            <h3>{name}</h3>
-            <label>Precio: {price}€</label>
-            <label>Categoría: {category}</label>
-
-            <div className="card-footer">
-              <button className="btnDetalle">Detalle</button>
-            </div>
-          </div>
-        )
+        <ItemList products={products} />
       }
-
-    </div>
-
+    </>
   )
 }

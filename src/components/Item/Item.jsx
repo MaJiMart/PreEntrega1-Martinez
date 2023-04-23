@@ -1,15 +1,18 @@
-export const Item = () => {
+import { Link } from "react-router-dom";
+
+export const Item = ({ id, photo, name, price}) => {
+
   return (
     <div key={id} className="cards">
-      <img src={photo} className="card-pic" alt="imagen card" />
-      <div className="card-body">
-        <h6>Nombre: {name}</h6>
-        <label>Precio: {price}</label>
-        <label>Categoria: {category}</label>
-      </div>
-      <div className="card-footer">
-        <button className="btnDetalle">Detalle</button>
-      </div>
+      <img src={photo} className="card-pic" alt="imagen golosina card" />
+        <h3>{name}</h3>
+        <label>Precio: {price}€</label>
+
+        <div className="card-footer">
+          <Link to={`/detalle/${id}`}>
+          <button className="btnDetalle">Detalle</button>
+          </Link>
+        </div>
     </div>
-  )
+  );
 }
