@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { mockProducts } from "../../data/mockProducts";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import { ItemList } from "../ItemList/ItemList";
+
+
 import { useParams } from "react-router-dom";
-
-
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([])
@@ -12,14 +12,19 @@ export const ItemListContainer = () => {
   const {category} = useParams()
 
   useEffect(() => {
+    const dbFirestore = getFirestore()
+    const queryCollection = collection(dbFirestore, 'products')
+
     if (!category) {
-      mockProducts()
-        .then(resultado => { setProducts(resultado) })
-        .catch(error => console.log(error))
-        .finally(() => setIsLoading(false))
+    getDocs(queryCollection)
+      .then(resp => setProducts(resp.docs.map(product => ({id: product.id, ...product.data()}))))
+      .catch(error => console.log(error))
+      .finally(() => setIsLoading(false))
     }else{
-      mockProducts()
-      .then(resultado => { setProducts(resultado.filter(products=>products.category === category)) })
+      const filterQueryCollec = query(queryCollection, where('category', '==', category))
+
+      getDocs(filterQueryCollec)
+      .then(resp => setProducts(resp.docs.map(product => ({id: product.id, ...product.data()}))))
       .catch(error => console.log(error))
       .finally(() => setIsLoading(false))
     }

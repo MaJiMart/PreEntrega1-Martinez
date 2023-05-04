@@ -10,11 +10,13 @@ export const NavBar = () => {
                 </div>
             </Link>
             <nav>
-                <NavLink to='/category/caramelos' className={ ({isActive})=> isActive ? 'isActive' : 'isNotActive'}>Caramelos</NavLink>
-                <NavLink to='/category/chocolates'className={ ({isActive})=> isActive ? 'isActive' : 'isNotActive'}>Chocolates</NavLink>
-                <NavLink to='/category/galletas'className={ ({isActive})=> isActive ? 'isActive' : 'isNotActive'}>Galletas</NavLink>
+                <NavLink to='/category/caramelos' className={({ isActive }) => isActive ? 'isActive' : 'isNotActive'}>Caramelos</NavLink>
+                <NavLink to='/category/chocolates' className={({ isActive }) => isActive ? 'isActive' : 'isNotActive'}>Chocolates</NavLink>
+                <NavLink to='/category/galletas' className={({ isActive }) => isActive ? 'isActive' : 'isNotActive'}>Galletas</NavLink>
             </nav>
-            <CartWidget />
+            <Link to='/cart'>
+                <CartWidget />
+            </Link>
         </div>
     )
 }

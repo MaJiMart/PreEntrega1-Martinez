@@ -5,11 +5,11 @@ export const CartWidget = () => {
 
     return (
         <div className='shop'>
-        <div className="storeIcon">
-        <FontAwesomeIcon icon={faStore}/>
+            <div className="storeIcon">
+                <FontAwesomeIcon icon={faStore} />
+            </div>
+            <span id='cantidadCarrito'> 0 </span>
         </div>
-        <span id='cantidadCarrito'> 0 </span>
-        </div>
-        
+
     )
 }
