@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
+import { BtnAddCart } from "../BtnAddCart/BtnAddCart";
 
-export const Item = ({ id, photo, name, price}) => {
-
+export const Item = ({ id, photo, name, price }) => {
   return (
     <div key={id} className="cards">
       <img src={photo} className="cardPic" alt="imagen golosina card" />
-        <h3>{name}</h3>
-        <label>Precio: {price}€</label>
+      <h3>{name}</h3>
+      <label>Precio: {price}€</label>
 
-        <div className="card-footer">
-          <Link to={`/detalle/${id}`}>
+      <div className="card-footer">
+        <Link to={`/detalle/${id}`}>
           <button className="btnDetalle">Detalle</button>
-          </Link>
-        </div>
+        </Link>
+        <BtnAddCart />
+      </div>
     </div>
   );
-}
+};

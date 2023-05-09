@@ -142,6 +142,9 @@
   width: 14vw;
   border-radius: 10px;
 }
+.cards .card-footer {
+  display: flex;
+}
 
 .cardsDetail {
   background-color: rgba(108, 172, 228, 0.5960784314);
@@ -185,13 +188,14 @@
 }
 
 .btnDetalle {
-  width: 10vw;
+  width: 6vw;
+  margin: 0.5rem;
   padding: 10px;
   font-size: 19px;
   font-family: "Inter";
   border-style: solid;
   border-color: #2C5082;
-  border-width: 5px;
+  border-width: 2px;
   outline: 0;
   background: none;
   color: #052541;
@@ -232,6 +236,54 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 300ms ease;
+}
+
+.btnEnviar {
+  width: 20vw;
+  margin: 0.5rem;
+  padding: 10px;
+  font-size: 19px;
+  font-family: "Inter";
+  border-color: #c7ddf0;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos Formulario */
+.formFinal {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: none;
+}
+.formFinal ::-moz-placeholder {
+  color: #c7ddf0;
+}
+.formFinal ::placeholder {
+  color: #c7ddf0;
+}
+.formFinal .campo {
+  display: flex;
+  flex-direction: row;
+  background: none;
+  color: #6CACE4;
+  width: 20rem;
+  margin: 10px 5px 10px;
+  padding: 5px;
+  border: none;
+  border-bottom: solid #dddddd;
 }
 
 /* Estilos de titulos y textos */

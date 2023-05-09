@@ -6,6 +6,7 @@ import { ItemDetailCountainer } from './components/ItemDetailCountainer/ItemDeta
 import { NotFound } from './components/NotFound/NotFound';
 import { CartContext } from './context/cartContext';
 import { Cart } from './components/Cart/Cart';
+import { FormContainer } from './components/FormContainer/FormContainer';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
 
         </Routes>
+        <FormContainer/>
       {/* </CartContext.Provider> */}
     </BrowserRouter>
   )

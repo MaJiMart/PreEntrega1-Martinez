@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import { ItemList } from "../ItemList/ItemList";
+import { IsLoading } from "../IsLoading/IsLoading";
 
 
 import { useParams } from "react-router-dom";
@@ -33,7 +34,7 @@ export const ItemListContainer = () => {
   return (
     <>
       {isLoading ?
-        <h2>Cargando...</h2>
+        <IsLoading/>
         :
         <ItemList products={products} />
       }
