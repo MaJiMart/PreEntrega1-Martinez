@@ -26,7 +26,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
 
         </Routes>
-        <FormContainer/>
+        {/* <FormContainer/> */}
       {/* </CartContext.Provider> */}
     </BrowserRouter>
   )
