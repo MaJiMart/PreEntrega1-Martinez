@@ -6,7 +6,7 @@ export const NavBar = () => {
         <div className='navbar'>
             <Link to='/' className="logospace">
                 <div className='logospace'>
-                    <img src='../public/logoNombre.png' alt="logo de Que Chucheria" />
+                    <img src='/logoNombre.png' alt="logo de Que Chucheria" />
                 </div>
             </Link>
             <nav>

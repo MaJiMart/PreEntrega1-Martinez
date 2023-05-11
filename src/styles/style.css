@@ -1,16 +1,12 @@
 @charset "UTF-8";
 /*Color fondo*/
-/*color texto de la nav*/
 /*etiquetas h1, h2 y texto de cards y footer*/
 /*textos de la web*/
 /*boton enviar y menu desplegable*/
 /*llamativo - usado en los h3, boton de enviar y línea separación*/
 /*bordes de formulario*/
-/*footer background-color*/
 /*cards background-color*/
-/*menu background-color*/
-/*hover boton enviar*/
-/*icono tienda*/
+/*hover boton*/
 /*tipos de fuentes de la web*/
 /*fuente general de la web*/
 /*fuente cursiva para titulos*/
@@ -33,16 +29,20 @@
 
 .counter {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.counter .bodyCounter {
+  background-color: none;
+  border-radius: 10px;
 }
 .counter div label {
   color: #052541;
 }
 
 .detailCont {
-  width: 98%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@
 
 #root {
   background-repeat: repeat;
-  background-image: url("../../../public/fondo4.png");
+  background-image: url("/public/fondo4.png");
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -139,7 +139,7 @@
   align-items: center;
 }
 .cards .cardPic {
-  width: 14vw;
+  width: 85%;
   border-radius: 10px;
 }
 .cards .card-footer {
@@ -149,7 +149,7 @@
 .cardsDetail {
   background-color: rgba(108, 172, 228, 0.5960784314);
   width: 50vw;
-  height: 50vh;
+  height: 40vh;
   margin: 3vh 25vw 3vh 25vw;
   padding: 0.7rem;
   border-radius: 20px;
@@ -167,12 +167,12 @@
   align-items: center;
 }
 .cardsDetail .cardBody .imgDet {
-  margin: 3rem;
+  margin-top: 6vh;
   width: 50%;
 }
 .cardsDetail .cardBody .imgDet .picDetail {
-  padding: 1rem;
-  width: 23rem;
+  padding: 0.5rem;
+  width: 100%;
   border-radius: 25px;
 }
 .cardsDetail .cardBody .infoDet {
@@ -186,9 +186,34 @@
   font-family: "Inter";
   color: #052541;
 }
+.cardsDetail .cardFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.cardCart {
+  background-color: rgba(108, 172, 228, 0.5960784314);
+  width: 90vw;
+  height: 20vh;
+  margin: 3rem;
+  padding: 0.7rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardCart img {
+  height: 90%;
+  border-radius: 10px;
+}
 
 .btnDetalle {
-  width: 6vw;
+  height: 6vh;
+  width: 12vw;
   margin: 0.5rem;
   padding: 10px;
   font-size: 19px;
@@ -209,12 +234,31 @@
 }
 
 .btnCounter {
+  height: 4vh;
   width: 2vw;
   margin: 0.5rem;
   padding: 5px;
   font-size: 19px;
   font-family: "Inter";
-  border-color: #c7ddf0;
+  border-color: #2C5082;
+  border-style: none;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btnAdd {
+  height: 5vh;
+  width: 10vw;
+  margin: 0.5rem;
+  padding: 10px;
+  font-size: 19px;
+  font-family: "Inter";
+  border-color: #2C5082;
+  border-style: outset;
   outline: 0;
   background: #2C5082;
   color: #c7ddf0;
@@ -222,9 +266,12 @@
   cursor: pointer;
   transition: all 300ms ease;
 }
+.btnAdd:hover {
+  border-style: none;
+}
 
-.btnAdd {
-  width: 10vw;
+.btnEnviar {
+  width: 20vw;
   margin: 0.5rem;
   padding: 10px;
   font-size: 19px;
@@ -238,7 +285,57 @@
   transition: all 300ms ease;
 }
 
-.btnEnviar {
+.btnFinish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  margin: 0.5rem;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: "Inter";
+  border-color: #c7ddf0;
+  outline: 0;
+  background: #2C5082;
+  color: #c7ddf0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btnContinue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  margin: 0.5rem;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: "Inter";
+  border-style: solid;
+  border-color: #2C5082;
+  border-width: 2px;
+  outline: 0;
+  background: #c7ddf0;
+  color: #052541;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btnRemove {
+  height: 3rem;
+  width: 3rem;
+  padding: 5px;
+  background: none;
+  border: none;
+  color: #2C5082;
+  font-size: 2rem;
+}
+
+.btnDeleteAll {
   width: 20vw;
   margin: 0.5rem;
   padding: 10px;
@@ -279,6 +376,7 @@
   flex-direction: row;
   background: none;
   color: #6CACE4;
+  font-size: 1.2rem;
   width: 20rem;
   margin: 10px 5px 10px;
   padding: 5px;
@@ -324,7 +422,7 @@ h3 {
 }
 .notFound h2 {
   margin: 3rem;
-  color: #e0fd5d;
+  color: #fdf95d;
   font-size: 8rem;
 }
 .notFound h3 {

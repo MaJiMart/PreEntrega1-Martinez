@@ -1,12 +1,12 @@
 import { useCounter } from "../../hook/useCounter";
-import { BtnAddCart } from "../BtnAddCart/BtnAddCart";
 
 export const ItemCount = ({ initial = 1, stock = 5, onAdd}) => {
+  
   const { counter, countDown, countUp } = useCounter(initial, 1, stock);
 
   return (
     <div className="counter">
-      <div>
+      <div className="bodyCounter">
         <button className="btnCounter" onClick={countDown}>
           -
         </button>
@@ -17,7 +17,6 @@ export const ItemCount = ({ initial = 1, stock = 5, onAdd}) => {
       </div>
       <div>
       <button className="btnAdd" onClick={() => {onAdd(counter)}}>Agregar al carrito</button>
-        {/* <BtnAddCart /> */}
       </div>
     </div>
   );

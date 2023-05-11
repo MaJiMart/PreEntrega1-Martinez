@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BtnAddCart } from "../BtnAddCart/BtnAddCart";
+
 
 export const Item = ({ id, photo, name, price }) => {
   return (
@@ -7,12 +7,10 @@ export const Item = ({ id, photo, name, price }) => {
       <img src={photo} className="cardPic" alt="imagen golosina card" />
       <h3>{name}</h3>
       <label>Precio: {price}€</label>
-
       <div className="card-footer">
         <Link to={`/detalle/${id}`}>
-          <button className="btnDetalle">Detalle</button>
+          <button className="btnDetalle">Comprar</button>
         </Link>
-        <BtnAddCart />
       </div>
     </div>
   );
