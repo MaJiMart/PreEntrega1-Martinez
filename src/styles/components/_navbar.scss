@@ -1,9 +1,14 @@
 .navbar {
+    background-color: $back;
     display: flex;
+    position: sticky;
+    top: 0px;
     align-items: center;
     flex-direction: row;
     height: 25vh;
-    width: 98.5vw;
+    width: 100%;
+
+    
 
     .logospace {
         align-items: center;

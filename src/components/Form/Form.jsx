@@ -1,14 +1,41 @@
-export const Form = ({ formData, saveChanges, errors, validForm }) => {
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { useCartContext } from "../../context/CartContext"
+
+export const Form = ({ formData, setFormData, saveChanges, errors, validForm}) => {
+  const {cartList, totalToPay, emptyCart} = useCartContext()
 
   const finishOrder = (e)=>{
     e.preventDefault()
+
     if (validForm()) {
-        console.log('enviando;', formData)
-    }
+        const order = {}
+        order.buyer = formData
+        order.items = cartList.map(({name, id, price, amount})=>({name, id, price, amount}))
+        order.total = totalToPay()
+
+        const dbFirestore = getFirestore()
+        const ordersCollection = collection(dbFirestore, 'orders')
+
+        addDoc(ordersCollection, order)
+        .then(resp => console.log(resp))
+        .catch(error => console.log(error))
+        .finally(() => {
+          setFormData({name: "", lastName: "", phone: "", email: "", emailV: ""})
+
+          setTimeout(()=>{
+            emptyCart()
+          },3000)
+
+        }
+        )
+        console.log('orden generada')
+      }
+  
   }
   
   return (
     <form className="formFinal" onSubmit={finishOrder}>
+    <h2>Ingresa tus datos para finalizar el pedido</h2>
       <input
         className="campo"
         type="text"
@@ -54,7 +81,7 @@ export const Form = ({ formData, saveChanges, errors, validForm }) => {
         value={formData.emailV}
         />
         {errors && errors.emailV && <span>{errors.emailV}</span>}
-        <button className="btnEnviar">Terminar compra</button>
+        <button className="btnEnviar">Terminar pedido</button>
     </form>
-    )
+  )
 }

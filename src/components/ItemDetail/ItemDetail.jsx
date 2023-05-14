@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom"
-import { useCartContext } from "../../context/cartContext";
+import { useCartContext } from "../../context/CartContext"
 
 export const ItemDetail = ({ product }) => {
   const [quantity, setQuantity] = useState(false)
@@ -30,8 +30,7 @@ export const ItemDetail = ({ product }) => {
         </div>
       </div>
       <div className="cardFooter">
-      {
-        !quantity ? 
+      {!quantity ? 
           <ItemCount onAdd={onAdd} />
         : 
         <>

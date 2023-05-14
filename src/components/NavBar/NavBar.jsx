@@ -14,9 +14,7 @@ export const NavBar = () => {
                 <NavLink to='/category/chocolates' className={({ isActive }) => isActive ? 'isActive' : 'isNotActive'}>Chocolates</NavLink>
                 <NavLink to='/category/galletas' className={({ isActive }) => isActive ? 'isActive' : 'isNotActive'}>Galletas</NavLink>
             </nav>
-            <Link to='/cart'>
-                <CartWidget />
-            </Link>
+                <CartWidget />    
         </div>
     )
 }

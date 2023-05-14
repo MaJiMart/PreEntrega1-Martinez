@@ -16,7 +16,7 @@ export const validatedForm = (WrappedComponent) => {
         newErrors.lastName = "No puedes dejarlo vacio"
         isValid = false
     }
-       if (!props.formData.phone) {
+      if (!props.formData.phone) {
         newErrors.phone = "Necesitamos tu número de teléfono"
         isValid = false
         }
@@ -25,7 +25,7 @@ export const validatedForm = (WrappedComponent) => {
         isValid = false
       }
       if (props.formData.emailV !== props.formData.email) {
-        newErrors.email = "Debes escribir el mismo email que en el campo anterior"
+        newErrors.email = "Debes escribir el mismo email en ambos campos"
         isValid = false
       }
       setErrors(newErrors)

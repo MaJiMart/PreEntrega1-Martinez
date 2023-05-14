@@ -8,24 +8,39 @@ export const CartContextProv = ({ children }) => {
     const [cartList, setCartList] = useState([])
 
     const addToCart = (newProduct) => {
-        //agregar logica de producto repetido
-    setCartList([...cartList, newProduct])
+
+        const index = cartList.findIndex(prod => newProduct.id === prod.id)
+
+        if (index === -1) {
+            setCartList([...cartList, newProduct])
+        }else{
+            cartList[index].amount += newProduct.amount
+            setCartList([...cartList])
+        }
     }
 
     const emptyCart =()=>{
         setCartList([])
     }
 
-    //cantidad total de productos
-    //precio total de la compra
-    //eliminar por item
+    const totalToPay = ()=> cartList.reduce((total, productOb)=>total += (productOb.amount*productOb.price),0)
+
+    const totalAmount = ()=> cartList.reduce((total, prodOb)=> total += prodOb.amount,0)
+
+    const deleteProduct = (prod) =>{
+        const item = cartList.filter(product=> product.id !== prod)
+        setCartList (item)
+    }
 
     return (
     <CartContext.Provider
         value={{
         cartList,
         addToCart,
-        emptyCart
+        emptyCart,
+        totalToPay,
+        totalAmount,
+        deleteProduct
         }}>
         {children}
     </CartContext.Provider>

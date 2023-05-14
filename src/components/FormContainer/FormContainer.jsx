@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Form } from "./Form";
-import { validatedForm } from "./validatedForm";
+import { Form } from "../Form/Form";
+import { validatedForm } from "../Form/validatedForm";
 
 const ValidatedForm = validatedForm(Form)
 
@@ -13,8 +13,6 @@ export function FormContainer () {
     emailV: "",
     });
 
-    
-
     const saveChanges = (e) => {
         setFormData({
             ...formData,
@@ -24,7 +22,8 @@ export function FormContainer () {
 
     return (
     <ValidatedForm 
-    formData={formData} 
+    formData={formData}
+    setFormData={setFormData}
     saveChanges={saveChanges}
     />
     )

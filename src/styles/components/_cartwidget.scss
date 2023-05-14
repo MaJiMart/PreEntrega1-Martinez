@@ -4,28 +4,30 @@
     height: 100%;
     margin: 5rem;
     justify-content: center;
+    
 
     .storeIcon {
-     
         display: flex;
         height: 80%;
         padding: 1rem;
-        font-size: 4rem;
+        font-size: 3.5rem;
+        color: $light;
         justify-content: center;
         align-items: center;
-
+        text-decoration: inherit;
         &:hover {
             color: $tittles;
         }
     }
 
     #cantidadCarrito {
-
         display: flex;
+        align-items: center;
+        justify-content: end;
         height: 90%;
         color: $light;
-        font-size: 2rem;
-        align-items: center;
+        font-size: 1.5rem;
+        text-decoration: none;
 
     }
 }

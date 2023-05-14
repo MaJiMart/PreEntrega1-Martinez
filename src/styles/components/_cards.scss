@@ -78,7 +78,7 @@
     background-color: $backcards;
     width: 90vw;
     height: 20vh;
-    margin:3rem;
+    margin:1.5rem 3rem;
     padding: 0.7rem;
     border-radius: 20px;
     display: flex;
@@ -88,5 +88,48 @@
     img{
         height: 90%;
         border-radius: 10px;
+    }
+}
+
+.headerCardCart{
+    background-color: $backcards;
+    width: 90vw;
+    height: 5vh;
+    margin:0rem 3rem;
+    padding: 0vh 13vw 0vh 21vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    h4{
+        color: $text;
+    }
+}
+
+.footerCardCart{
+    background-color: $backcards;
+    width: 90vw;
+    height: 15vh;
+    margin:0.5rem 3rem 2rem;
+    padding: 0vh 5vw 0vh 10vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: flex-end;
+    h4{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.8rem;
+        width: 26rem;
+        margin: 2vh 1vw 0vh 0vw;
+        padding: 0vh 3vw 0vh 0vw;
+        color: $text;
+    }
+    .btnsCart{
+        display: flex;
+        flex-direction: row;
     }
 }

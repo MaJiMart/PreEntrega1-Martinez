@@ -60,6 +60,9 @@
 }
 
 .btnEnviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20vw;
     margin: 0.5rem;
     padding: 10px;
@@ -83,8 +86,9 @@
     padding: 10px;
     text-decoration: none;
     font-size: 19px;
+    font-weight: 600;
     font-family: $webfont;
-    border-color: $light;
+    border-style: none;
     outline: 0;
     background: $back;
     color: $light;
@@ -103,7 +107,7 @@
     text-decoration: none;
     font-size: 19px;
     font-family: $webfont;
-    border-style: solid ;
+    border-style: none ;
     border-color: $back;
     border-width: 2px;
     outline: 0;
@@ -115,6 +119,9 @@
 }
 
 .btnRemove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
     width: 3rem;
     padding: 5px;
@@ -122,9 +129,14 @@
     border: none;
     color: $back;
     font-size: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease;
 }
 
 .btnDeleteAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20vw;
     margin: 0.5rem;
     padding: 10px;
@@ -137,4 +149,45 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 300ms ease;
+}
+
+.btnEmpty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    margin: 0.5rem;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: $webfont;
+    border-style: none;
+    background: $backcards;
+    color: $text;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btnBack{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: inherit;
+    margin: 3rem;
+    img{
+        height: 15vh;
+        &:hover{
+            transition: transform 0.5s ease;
+            transform: rotate(360deg)
+        }
+    }
+    h5{
+        color: $tittles;
+        font-size: 1.5rem;
+        &:hover{
+            text-decoration: underline;
+    }
+    }
 }
