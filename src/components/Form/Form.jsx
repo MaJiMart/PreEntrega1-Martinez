@@ -1,5 +1,6 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { useCartContext } from "../../context/CartContext"
+import Swal from 'sweetalert2'
 
 export const Form = ({ formData, setFormData, saveChanges, errors, validForm}) => {
   const {cartList, totalToPay, emptyCart} = useCartContext()
@@ -7,30 +8,37 @@ export const Form = ({ formData, setFormData, saveChanges, errors, validForm}) =
   const finishOrder = (e)=>{
     e.preventDefault()
 
-    if (validForm()) {
-        const order = {}
-        order.buyer = formData
-        order.items = cartList.map(({name, id, price, amount})=>({name, id, price, amount}))
-        order.total = totalToPay()
+  if (validForm()) {
+    const order = {}
+    order.buyer = formData
+    order.items = cartList.map(({name, id, price, amount})=>({name, id, price, amount}))
+    order.total = totalToPay()
 
-        const dbFirestore = getFirestore()
-        const ordersCollection = collection(dbFirestore, 'orders')
+    const dbFirestore = getFirestore()
+    const ordersCollection = collection(dbFirestore, 'orders')
 
-        addDoc(ordersCollection, order)
-        .then(resp => console.log(resp))
-        .catch(error => console.log(error))
-        .finally(() => {
-          setFormData({name: "", lastName: "", phone: "", email: "", emailV: ""})
+    addDoc(ordersCollection, order)
 
-          setTimeout(()=>{
-            emptyCart()
-          },3000)
-
-        }
-        )
-        console.log('orden generada')
-      }
-  
+      .then (({id}) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Muchas Gracias',
+          text: `Tu pedido id: ${id} está en preparación`,
+          confirmButtonColor: '#6CACE4',
+          background: '#2C5082',
+          color: '#dddddd'
+        })
+      })
+      .catch(error => console.log(error))
+      .finally(() => {
+        setFormData({name: "", lastName: "", phone: "", email: ""})
+          
+        setTimeout(()=>{
+          emptyCart()
+          window.location.href = "/"
+        },5000)
+      })
+    }
   }
   
   return (
