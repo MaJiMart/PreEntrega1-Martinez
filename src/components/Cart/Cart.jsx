@@ -2,11 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import { ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Cart = () => {
     const { cartList, emptyCart, totalToPay, deleteProduct } = useCartContext();
 
     return (
+        <>
         <div className="cart">
             <div className="headerCardCart">
                 <h4>Precio</h4>
@@ -35,5 +38,7 @@ export const Cart = () => {
                 </div>
             </div>
         </div>
+        <ToastContainer/>
+        </>
     )
 }

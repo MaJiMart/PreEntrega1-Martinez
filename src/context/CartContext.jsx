@@ -1,6 +1,21 @@
 import { createContext, useContext, useState } from "react"
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = createContext([])
+
+const notifyDelete = () => 
+toast.info('Producto eliminado', {
+position: "bottom-center",
+autoClose: 3000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+icon: false,
+theme: "color",
+});
 
 export const useCartContext = () => useContext(CartContext)
 
@@ -21,6 +36,7 @@ export const CartContextProv = ({ children }) => {
 
     const emptyCart =()=>{
         setCartList([])
+        
     }
 
     const totalToPay = ()=> cartList.reduce((total, productOb)=>total += (productOb.amount*productOb.price),0)
@@ -30,6 +46,7 @@ export const CartContextProv = ({ children }) => {
     const deleteProduct = (prod) =>{
         const item = cartList.filter(product=> product.id !== prod)
         setCartList (item)
+        notifyDelete()
     }
 
     return (

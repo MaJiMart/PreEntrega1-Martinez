@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import { useCounter } from "../../hook/useCounter";
 
 export const ItemCount = ({ initial = 1, stock = 5, onAdd}) => {
