@@ -85,9 +85,12 @@
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    img{
-        height: 90%;
-        border-radius: 10px;
+    div{
+        margin-right: 4vw;
+        img{
+            height: 15vh;
+            border-radius: 10px;
+        }
     }
 }
 

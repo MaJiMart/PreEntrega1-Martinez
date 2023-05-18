@@ -19,7 +19,9 @@ export const Cart = () => {
             <div>
                 {cartList.map((prod) => (
                 <div className="cardCart">
+                    <div>
                     <img src={prod.photo} alt="imagen del producto seleccionado"/>
+                    </div>
                     <label>Precio: {prod.price}€</label>
                     <label>Cantidad: {prod.amount}</label>
                     <label>Subtotal: {prod.price * prod.amount}€</label>

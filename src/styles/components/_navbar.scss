@@ -19,10 +19,12 @@
 
     nav {
         width: 97vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-evenly;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+        }
 
         .isActive{
             list-style-type: none;
@@ -51,4 +53,10 @@
 
     }
 
+}
+
+/*menu hamburguesa*/
+#menu,
+#menuCheck {
+    display: none;
 }
