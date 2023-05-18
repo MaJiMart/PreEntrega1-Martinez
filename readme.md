@@ -15,9 +15,9 @@
 <p>Podría describirla con muchos detalles, pero creo que es más divertido si ingresan al demo ⬆️ y la descubren poco a poco.</p>
 
 <h3><b>Para el desarrollo de esta app utilicé:</b></h3>
-<p></p> 
+<p> 
 <img src='public/readme/html.svg' height='50px'><img src='public/readme/css.svg' height='50px'> <img src='public/readme/sass.svg' height='50px'> <img src='public/readme/js.svg' height='50px'> <img src='public/readme/react.svg' height='50px'> <img src='public/readme/git.svg' height='50px'> <img src='public/readme/node.svg' height='50px'> <img src='public/readme/firebase.svg' height='50px'> <img src='public/readme/vite.svg' height='50px'> <img src='public/readme/canva.svg' height='50px'> 
-<p></p>
+</p>
 <p> Para mejorar la experiencia de usuario tamién utilicé:</p>
 <li>Toastify</li>
 <li>SweetAlert</li>
