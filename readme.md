@@ -4,7 +4,7 @@
 
 <h2>E-Commerce: ¡Qué Chucheria! Golosinas Argentinas</h2>
 <p>
-<p>🍭 Puedes ver el demo de la app en: <a>https://que-chucheria.netlify.app/</a></p>
+<p>🍭 Puedes ver el demo de la app en: https://que-chucheria.netlify.app/</p>
 
 <h3>Funcionamiento de la app:</h3>
 
@@ -30,4 +30,4 @@
 -----------------------------------------------------------------------------------------
 </p>
 <h2>Si quieren saber más de mi</h2>
-<p>Pueden ver mis proyectos en: <a>https://github.com/MaJiMart</a></p>
+<p>Pueden ver mis proyectos en: https://github.com/MaJiMart</p>
