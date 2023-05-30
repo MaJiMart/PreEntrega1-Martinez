@@ -43,7 +43,7 @@ theme: "color",
       </div>
       <div className="cardFooter">
       {!quantity ? 
-          <ItemCount onAdd={onAdd} />
+        <ItemCount onAdd={onAdd} />
         : 
         <>
         <Link to='/' className="btnContinue">Seguir comprando</Link>
